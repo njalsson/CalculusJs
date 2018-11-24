@@ -3,19 +3,21 @@ var ctx = c.getContext("2d");
 
 
 // check if button was pressed, to the event thing, shiiiet
-ctx.beginPath();
-ctx.moveTo(0,250);
-ctx.lineTo(500,250);
-ctx.stroke();
+function drawgrid(){
+    ctx.beginPath();
+    ctx.moveTo(0,250);
+    ctx.lineTo(500,250);
+    ctx.stroke();
 
-ctx.beginPath();
-ctx.moveTo(250, 0);
-ctx.lineTo(250, 500);
-ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(250, 0);
+    ctx.lineTo(250, 500);
+    ctx.stroke();
+}   
+drawgrid();
 let maxnum;
 let minnum;
 ctx.translate(250,250);
-
 $('#button').click(function() { 
 
 
@@ -64,4 +66,5 @@ let canvas = document.getElementById("myCanvas");
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.translate(250,250);
 
+    drawgrid();
 });
